@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito+Sans");
+:root {
+  --blue: #0e0620;
+  --white: #fff;
+  --green: #2ccf6d;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Nunito Sans";
+  color: var(--blue);
+  font-size: 1em;
+}
+
+button {
+
+  font-family: "Nunito Sans";
+}
+
+a {
+	display: block;
+	background: green;
+	color: #fff;
+	padding: 8px;
+	cursor: pointer;
+	text-decoration: none;
+	width: 230px;
+	text-align: center;
+	border-radius: 100px;
+	font-size: 20px;
+}
+
+ul {
+  list-style-type: none;
+  -webkit-padding-start: 35px;
+          padding-inline-start: 35px;
+}
+
+svg {
+  width: 100%;
+  visibility: hidden;
+}
+
+h1 {
+  font-size: 7.5em;
+  margin: 15px 0px;
+  font-weight: bold;
+}
+
+h2 {
+  font-weight: bold;
+}
+
+.hamburger-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 35px;
+  z-index: 2;
+}
+.hamburger-menu button {
+  position: relative;
+  width: 30px;
+  height: 22px;
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+}
+.hamburger-menu button span {
+  position: absolute;
+  height: 3px;
+  background: #000;
+  width: 100%;
+  left: 0px;
+  top: 0px;
+  transition: 0.1s ease-in;
+}
+.hamburger-menu button span:nth-child(2) {
+  top: 9px;
+}
+.hamburger-menu button span:nth-child(3) {
+  top: 18px;
+}
+.hamburger-menu [data-state=open] span:first-child {
+  transform: rotate(45deg);
+  top: 10px;
+}
+.hamburger-menu [data-state=open] span:nth-child(2) {
+  width: 0%;
+  opacity: 0;
+}
+.hamburger-menu [data-state=open] span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 10px;
+}
+
+.btn {
+  z-index: 1;
+  overflow: hidden;
+  background: transparent;
+  position: relative;
+  padding: 8px 50px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1em;
+  letter-spacing: 2px;
+  transition: 0.2s ease;
+  font-weight: bold;
+  margin: 5px 0px;
+}
+.btn.green {
+  border: 4px solid var(--green);
+  color: var(--blue);
+}
+.btn.green:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0%;
+  height: 100%;
+  background: var(--green);
+  z-index: -1;
+  transition: 0.2s ease;
+}
+.btn.green:hover {
+  color: var(--white);
+  background: var(--green);
+  transition: 0.2s ease;
+}
+.btn.green:hover:before {
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    display: block;
+  }
+
+  .container {
+    margin-top: 70px;
+    margin-bottom: 70px;
+  }
+}
+a:hover {
+	background: greenyellow;
+}
+.btn-2 {
+	background: #F98909;
+}
+
+.btn-2:hover {
+	background: #dc6c11;
+}
